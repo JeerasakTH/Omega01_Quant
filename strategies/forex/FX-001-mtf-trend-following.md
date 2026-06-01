@@ -34,7 +34,7 @@ Major forex pairs show short-to-medium-term continuation when H1/H4 direction ag
 ## Signals
 
 - Trend filter: H1 and H4 EMA slope agree, with price on the same side of the selected EMA.
-- Entry signal: pullback toward EMA zone followed by close back in trend direction.
+- Entry signal: pullback toward EMA zone followed by close back in trend direction; first implementation uses `detect_ema_pullback`, `confirm_pullback_resume`, and `evaluate_fx001_signal`.
 - Exit signal: ATR stop, opposite structure break, or time stop.
 - No-trade filter: high spread, major news window, conflicting H1/H4 trend.
 - Implementation note: first reusable feature foundation is documented in `docs/research/fx001-feature-foundation.md`.
@@ -57,8 +57,8 @@ Short:
 
 ## Exit Rules
 
-- Stop loss: below/above pullback swing or ATR multiple, whichever is farther.
-- Take profit: fixed R target or trailing ATR; compare both in research.
+- Stop loss: below/above pullback swing or ATR multiple, whichever is farther; first implementation uses `generate_exit_levels`.
+- Take profit: fixed R target from stop distance; trailing ATR remains a later comparison.
 - Time stop: exit if no favorable movement after N entry timeframe bars.
 - Invalidating condition: H1 trend filter flips against position.
 
@@ -107,7 +107,7 @@ Short:
 ## QA Checklist
 
 - No lookahead from higher timeframe bar alignment.
-- Higher timeframe signals use only completed bars.
+- Higher timeframe signals use only completed bars; use `align_completed_higher_timeframe` for H1/H4 to M15 joins.
 - Costs and slippage applied.
 - Symbol suffixes discovered, not hardcoded.
 - Results reproducible from local MT5 data pull.

@@ -16,6 +16,13 @@ This document records the first reusable feature foundation for FX-001 Multi-Tim
   - `build_trend_state`
   - `align_trends`
   - `is_entry_allowed`
+  - `detect_ema_pullback`
+  - `confirm_pullback_resume`
+  - `evaluate_fx001_signal`
+  - `ExitLevels`
+  - `generate_exit_levels`
+- `omega01.data.alignment`
+  - `align_completed_higher_timeframe`
 
 ## What This Supports
 
@@ -24,14 +31,15 @@ This document records the first reusable feature foundation for FX-001 Multi-Tim
 - H1/H4 trend alignment into `long`, `short`, or `none`.
 - ATR feature creation for later stop and volatility logic.
 - Spread and recent-gap entry blocking.
+- Completed higher timeframe feature alignment without lookahead.
+- Pullback-to-EMA-zone detection.
+- Pullback resume confirmation for long and short setups.
+- First complete signal evaluator returning `long`, `short`, or `none`.
+- Stop-loss and take-profit generation using swing/ATR rules.
 
 ## What Is Not Implemented Yet
 
-- Pullback detection toward EMA zone.
-- Entry candle confirmation.
-- Stop-loss and take-profit generation.
 - Backtest execution engine.
-- Higher timeframe to lower timeframe alignment.
 - Gap-aware signal blocking from actual gap audit intervals.
 
 ## Verification
@@ -50,7 +58,7 @@ Expected:
 
 ## Next Actions
 
-1. Add timeframe alignment utilities so H1/H4 completed-bar features can be joined to M15 entries without lookahead.
-2. Add pullback-to-EMA-zone detection.
-3. Add signal confirmation logic for long and short entries.
-4. Add a minimal vectorized research backtest for FX-001 only.
+1. Add gap-aware signal blocking from actual gap audit intervals.
+2. Add a minimal vectorized research backtest for FX-001 only.
+3. Run the first EURUSDm H1/H4/M15 research pass.
+4. Send results through QA, Risk, and Critic review.

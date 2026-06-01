@@ -34,6 +34,7 @@ Deliverables:
 - Risk review checklist.
 - Critic review checklist.
 - Naming convention for datasets, experiments, and reports.
+- Initial forex strategy research universe.
 
 Exit criteria:
 

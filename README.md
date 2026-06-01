@@ -41,3 +41,5 @@ pytest
 See `AGENTS.md` for the project operating guide, role definitions, and research workflow.
 
 Project planning lives in `docs/roadmap.md`. Role charters live in `docs/roles/`.
+
+The first forex strategy research universe lives in `docs/research/strategy-universe.md`.

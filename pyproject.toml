@@ -30,6 +30,7 @@ mt5 = [
 
 [project.scripts]
 omega01-mt5-forex-inventory = "omega01.cli.mt5_forex_inventory:main"
+omega01-mt5-fetch-forex = "omega01.cli.mt5_fetch_forex:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

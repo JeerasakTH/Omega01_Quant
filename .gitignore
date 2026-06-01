@@ -33,10 +33,13 @@ Thumbs.db
 data/*
 !data/.gitkeep
 !data/raw/
+data/raw/*
 !data/raw/.gitkeep
 !data/processed/
+data/processed/*
 !data/processed/.gitkeep
 !data/external/
+data/external/*
 !data/external/.gitkeep
 reports/*
 !reports/.gitkeep

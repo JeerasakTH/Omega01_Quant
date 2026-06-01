@@ -77,3 +77,5 @@ Use the actual Exness `m` suffix symbols in data work. The first-pass research b
 3. Confirm MT5 server timezone by comparing recent bar timestamps with known market session boundaries.
 4. Create small committed fixtures for tests, not full datasets.
 5. Build data quality checks for gaps, duplicates, timezone consistency, and missing OHLC values.
+
+The first major-pair pull is summarized in `mt5-major-data-quality.md`.

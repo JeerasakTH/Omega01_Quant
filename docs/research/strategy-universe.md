@@ -95,11 +95,11 @@ Start with strategies that are diverse, testable, and useful as building blocks.
 
 Recommended first five:
 
-1. FX-001 Conservative multi-timeframe trend following.
-2. FX-002 Range mean reversion with regime filter.
-3. FX-003 London session breakout after Asian range.
-4. FX-004 ATR volatility breakout.
-5. FX-018 Volatility regime switcher as meta-layer.
+1. [FX-001 Conservative multi-timeframe trend following](../../strategies/forex/FX-001-mtf-trend-following.md).
+2. [FX-002 Range mean reversion with regime filter](../../strategies/forex/FX-002-range-mean-reversion.md).
+3. [FX-003 London session breakout after Asian range](../../strategies/forex/FX-003-london-breakout.md).
+4. [FX-004 ATR volatility breakout](../../strategies/forex/FX-004-atr-volatility-breakout.md).
+5. [FX-018 Volatility regime switcher as meta-layer](../../strategies/forex/FX-018-volatility-regime-switcher.md).
 
 Why these first:
 
@@ -144,6 +144,8 @@ Start with major and liquid symbols available in Exness MT5:
 - XAUUSD only after forex data workflow is stable
 
 Symbol suffixes such as `m` should be discovered from the local MT5 terminal instead of hardcoded.
+
+The first Exness MT5 inventory found 28 forex symbols using the `m` suffix. See `mt5-forex-inventory.md`.
 
 ## Timeframe Plan
 

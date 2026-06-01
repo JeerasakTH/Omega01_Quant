@@ -35,6 +35,7 @@ Deliverables:
 - Critic review checklist.
 - Naming convention for datasets, experiments, and reports.
 - Initial forex strategy research universe.
+- First five forex strategy specs for the initial research basket.
 
 Exit criteria:
 

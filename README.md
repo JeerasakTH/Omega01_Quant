@@ -43,3 +43,6 @@ See `AGENTS.md` for the project operating guide, role definitions, and research 
 Project planning lives in `docs/roadmap.md`. Role charters live in `docs/roles/`.
 
 The first forex strategy research universe lives in `docs/research/strategy-universe.md`.
+The first MT5/Exness forex inventory summary lives in `docs/research/mt5-forex-inventory.md`.
+
+Research templates live in `docs/templates/`. First-pass forex strategy specs live in `strategies/forex/`.

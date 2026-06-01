@@ -24,6 +24,12 @@ research = [
     "scipy>=1.12",
     "statsmodels>=0.14",
 ]
+mt5 = [
+    "MetaTrader5>=5.0.45",
+]
+
+[project.scripts]
+omega01-mt5-forex-inventory = "omega01.cli.mt5_forex_inventory:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

@@ -69,6 +69,7 @@ Short:
 ## Costs and Execution Assumptions
 
 - Spread: filter and stress test required.
+- First-pass max spread filter: use entry-timeframe symbol-specific limits from `docs/research/mt5-spread-analysis.md`; stress with stricter and looser thresholds because volatility breakouts may coincide with widening spreads.
 - Commission: Exness account-specific assumption required.
 - Slippage: breakout slippage stress is required.
 - Fill model: next bar open after signal close.

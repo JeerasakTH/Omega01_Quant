@@ -50,18 +50,39 @@ This report summarizes the first deeper MT5/Exness data pull for major forex pai
 - Duplicate timestamps: 0 across all pulled datasets.
 - Missing OHLC rows: 0 across all pulled datasets.
 - Invalid OHLC rows: 0 across all pulled datasets.
-- Gap counts are nonzero because the current checker is calendar-unaware and counts weekend/market-close breaks as gaps.
+- Gap checks now use a simple Exness-oriented forex calendar: Friday close around 21:00 UTC, Sunday reopen around 21:00 UTC outside winter, and Sunday reopen around 22:00 UTC in winter.
+- Common year-end closures around Christmas and New Year are treated as expected closures.
+- H4 and D1 pass for all seven major pairs.
+- Intraday timeframes still show unexpected open-market gaps and need inspection before serious backtests.
 
-Current gap checks are useful as a rough detector, but they should not be treated as failure until we add a forex trading calendar.
+| Timeframe | Passed symbols | Total symbols | Gap range |
+| --- | ---: | ---: | --- |
+| M5 | 0 | 7 | 7-16 |
+| M15 | 0 | 7 | 2-3 |
+| H1 | 0 | 7 | 2 |
+| H4 | 7 | 7 | 0 |
+| D1 | 7 | 7 | 0 |
+
+Gap audit totals:
+
+| Timeframe | Gap events | Missing open bars |
+| --- | ---: | ---: |
+| M5 | 85 | 97 |
+| M15 | 15 | 37 |
+| H1 | 14 | 14 |
+| H4 | 0 | 0 |
+| D1 | 0 | 0 |
 
 ## QA Interpretation
 
-The initial data pull is usable for early research scaffolding, especially for H1/H4/D1 context and prototype tests. Before serious backtest conclusions, improve quality checks so expected forex market closures are not flagged as data gaps.
+The initial data pull is usable for early research scaffolding and H4/D1 context. Intraday datasets need a gap policy before serious backtest conclusions. The remaining H1/M15 gaps mostly cluster around late-February/early-March session changes and Sunday reopen timing; M5 has more small reopen/session-boundary gaps.
 
 ## Next Actions
 
-1. Add forex calendar-aware gap checks.
+1. Decide gap policy for intraday research: drop affected sessions, forward-fill nothing, and block entries around gap intervals.
 2. Decide whether to pull more than 10,000 bars for M5 and M15, because current M5 coverage starts in April 2026.
 3. Add spread analysis from the MT5 `spread` column.
 4. Create tiny test fixtures from selected clean rows, while keeping full datasets out of git.
-5. Start FX-001 feature engineering using H1/H4 context and M15/M30 entries after calendar-aware validation.
+5. Start FX-001 feature engineering using H4/D1 context first, and use H1/M15 only with gap-aware entry blocking.
+
+The first spread analysis is summarized in `mt5-spread-analysis.md`.

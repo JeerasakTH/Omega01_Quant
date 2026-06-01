@@ -76,6 +76,7 @@ No-trade mode:
 ## Costs and Execution Assumptions
 
 - Spread: meta-layer can block trading under high spread.
+- First-pass max spread filter: inherit symbol-specific limits from `docs/research/mt5-spread-analysis.md` and allow the meta-layer to force no-trade mode above those limits.
 - Commission: inherited from strategy assumptions.
 - Slippage: inherited plus regime stress tests.
 - Fill model: inherited from active strategy.

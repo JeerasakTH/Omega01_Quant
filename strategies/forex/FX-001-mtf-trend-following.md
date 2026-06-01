@@ -71,6 +71,7 @@ Short:
 ## Costs and Execution Assumptions
 
 - Spread: use MT5 spread if available; otherwise model conservative fixed and stress spread.
+- First-pass max spread filter: M15 entries use symbol-specific limits from `docs/research/mt5-spread-analysis.md` (`EURUSDm` 10, `GBPUSDm` 12, `USDJPYm` 12, `AUDUSDm` 11, `USDCHFm` 15, `USDCADm` 17, `NZDUSDm` 20 points).
 - Commission: Exness account-specific assumption required before serious report.
 - Slippage: start with 0.1-0.3 ATR fraction stress test or fixed point assumptions.
 - Fill model: next bar open after signal close for conservative research.

@@ -71,6 +71,7 @@ Short:
 ## Costs and Execution Assumptions
 
 - Spread: required because session open spreads may widen.
+- First-pass max spread filter: use M5/M15 symbol-specific limits from `docs/research/mt5-spread-analysis.md`, then run a separate London-open spread study before promotion.
 - Commission: Exness account-specific assumption required.
 - Slippage: stress test breakout fills with worse entry.
 - Fill model: next bar open after breakout close.

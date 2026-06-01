@@ -69,6 +69,7 @@ Short:
 ## Costs and Execution Assumptions
 
 - Spread: required filter for M5 tests.
+- First-pass max spread filter: use M5/M15 symbol-specific limits from `docs/research/mt5-spread-analysis.md`; prefer stricter M5 limits for mean reversion entries.
 - Commission: Exness account-specific assumption required.
 - Slippage: fixed point and stress scenarios.
 - Fill model: next bar open after confirmation close.

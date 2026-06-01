@@ -37,6 +37,7 @@ Major forex pairs show short-to-medium-term continuation when H1/H4 direction ag
 - Entry signal: pullback toward EMA zone followed by close back in trend direction.
 - Exit signal: ATR stop, opposite structure break, or time stop.
 - No-trade filter: high spread, major news window, conflicting H1/H4 trend.
+- Implementation note: first reusable feature foundation is documented in `docs/research/fx001-feature-foundation.md`.
 
 ## Entry Rules
 

@@ -46,5 +46,6 @@ The first forex strategy research universe lives in `docs/research/strategy-univ
 The first MT5/Exness forex inventory summary lives in `docs/research/mt5-forex-inventory.md`.
 The first major-pair data quality summary lives in `docs/research/mt5-major-data-quality.md`.
 The first MT5 spread analysis lives in `docs/research/mt5-spread-analysis.md`.
+The first FX-001 feature foundation note lives in `docs/research/fx001-feature-foundation.md`.
 
 Research templates live in `docs/templates/`. First-pass forex strategy specs live in `strategies/forex/`.

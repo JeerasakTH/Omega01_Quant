@@ -37,3 +37,7 @@ pytest
 - Do not commit raw market data, broker exports, credentials, or generated reports.
 - Record transaction costs, slippage, position sizing, and risk limits for every serious backtest.
 - Promote notebook ideas into `src/omega01` once they become reusable.
+
+See `AGENTS.md` for the project operating guide, role definitions, and research workflow.
+
+Project planning lives in `docs/roadmap.md`. Role charters live in `docs/roles/`.
